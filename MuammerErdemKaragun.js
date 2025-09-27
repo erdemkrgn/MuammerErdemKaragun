@@ -21,7 +21,7 @@ const read = (key, failValue = null) => {
     }
 };
 const turkishLiraFormatter = number => new Intl.NumberFormat("tr-TR", { style: "currency", currency: "TRY", maximumFractionDigits: 2 }).format(number);
-cosnt discountPercentage = (o_price, c_price) => (o_price > 0 && c_price < o_price) ? Math.round((1 - c / o) * 100) : 0;
+const discountPercentage = (o_price, c_price) => (o_price > 0 && c_price < o_price) ? Math.round((1 - c / o) * 100) : 0;
 const favProdSet = () => new Set((read(localStorage.Favs, []) || []).map(id => String(id)));
 const writeFavProdSet = products => save(localStorage.Favs, Array.from(products));
 
