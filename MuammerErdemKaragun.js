@@ -5,7 +5,7 @@ const localStorage = {
     CachedDate: "ebebek_products_cached_date",
     Favs: "ebebek_favorites"
 };
-const title = "Beðenebileceðinizi Düþündüklerimiz";
+const title = "BeÃ°enebileceÃ°inizi DÃ¼Ã¾Ã¼ndÃ¼klerimiz";
 const isHome = location.pathname === '/';
 if (!isHome) { console.log("Wrong Page"); return; }
 
@@ -21,7 +21,7 @@ const read = (key, failValue = null) => {
     }
 };
 const turkishLiraFormatter = number => new Intl.NumberFormat("tr-TR", { style: "currency", currency: "TRY", maximumFractionDigits: 2 }).format(number);
-const discountPercentage = (o_price, c_price) => (o_price > 0 && c_price < o_price) ? Math.round((1 - c / o) * 100) : 0;
+const discountPercentage = (o_price, c_price) => (o_price > 0 && c_price < o_price) ? Math.round((1 - c_price / o_price) * 100) : 0;
 const favProdSet = () => new Set((read(localStorage.Favs, []) || []).map(id => String(id)));
 const writeFavProdSet = products => save(localStorage.Favs, Array.from(products));
 
