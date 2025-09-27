@@ -5,7 +5,7 @@ const locStorage = {
     CachedDate: "ebebek_products_cached_date",
     Favs: "ebebek_favorites"
 };
-const title = "Beðenebileceðinizi Düþündüklerimiz";
+const title = "BeÃ°enebileceÃ°inizi DÃ¼Ã¾Ã¼ndÃ¼klerimiz";
 const isHome = location.pathname === '/';
 if (!isHome) { console.log("Wrong Page"); return; }
 
